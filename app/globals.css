@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+
+
+
+
+
+@theme inline {
+  --color-navy-deep:   #0d1642;
+  --color-navy:        #19137F;
+  --color-blue:        #1A3C96;
+  --color-blue-bright: #0B58A8;
+  --color-blue-light:  #3B519D;
+  --color-blue-pale:   #73ACCA;
+  --color-blue-ice:    #B8D4E8;
+  --color-bg:          #0a0f2a;
+  --color-bg-elev-1:   #111736;
+  --color-bg-elev-2:   #171e42;
+  --color-text:        #e8ecf5;
+  --color-text-muted:  #8993b8;
+  --color-green:       #6cb67a;
+  --color-amber:       #e0a954;
+  --color-red:         #d67575;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+  --radius:    0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  background-color: #0a0f2a;
+  color: #e8ecf5;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0a0f2a; }
+::-webkit-scrollbar-thumb { background: #19137F; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1A3C96; }
+
+.font-display     { font-family: "Fraunces", Georgia, serif; }
+.italic-editorial { font-family: "Fraunces", Georgia, serif; font-style: italic; }
+
+.glass {
+  background: rgba(17, 23, 54, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 81, 157, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #73ACCA 0%, #B8D4E8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-border {
+  box-shadow: 0 0 0 1px rgba(11, 88, 168, 0.4), 0 0 20px rgba(11, 88, 168, 0.15);
+}
+
+.status-active  { background: rgba(108,182,122,0.15); color:#6cb67a; border:1px solid rgba(108,182,122,0.3); }
+.status-pending { background: rgba(224,169,84,0.15);  color:#e0a954; border:1px solid rgba(224,169,84,0.3); }
+.status-blocked { background: rgba(214,117,117,0.15); color:#d67575; border:1px solid rgba(214,117,117,0.3); }
+.status-done    { background: rgba(115,172,202,0.15); color:#73ACCA; border:1px solid rgba(115,172,202,0.3); }
+
+.chip-miedo     { background:rgba(214,117,117,0.12); color:#d67575; border:1px solid rgba(214,117,117,0.3); }
+.chip-reto      { background:rgba(224,169,84,0.12);  color:#e0a954; border:1px solid rgba(224,169,84,0.3); }
+.chip-logro     { background:rgba(108,182,122,0.12); color:#6cb67a; border:1px solid rgba(108,182,122,0.3); }
+.chip-bloqueo   { background:rgba(214,117,117,0.12); color:#d67575; border:1px solid rgba(214,117,117,0.3); }
+.chip-compromiso{ background:rgba(115,172,202,0.12); color:#73ACCA; border:1px solid rgba(115,172,202,0.3); }
+.chip-alerta    { background:rgba(214,117,117,0.2);  color:#d67575; border:1px solid rgba(214,117,117,0.5); }
+.chip-default   { background:rgba(137,147,184,0.12); color:#8993b8; border:1px solid rgba(137,147,184,0.3); }

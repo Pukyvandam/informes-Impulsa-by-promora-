@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUMMIT — Obra Nueva en Aravaca, Madrid | Promora Inmobiliaria</title>
+  <meta name="description" content="SUMMIT: promoción de obra nueva de lujo en Aravaca, Madrid. Terrazas privadas, eficiencia energética A+ y acabados premium. Comercializado por Promora Inmobiliaria.">
+  <meta property="og:title" content="SUMMIT — Obra Nueva de Lujo en Aravaca">
+  <meta property="og:description" content="Terrazas privadas con vistas abiertas, materiales de primera calidad y arquitectura contemporánea en Aravaca, Madrid.">
+  <meta property="og:image" content="img/hero.jpg">
+  <meta property="og:type" content="website">
+  <!-- Rellenar con la URL definitiva de Netlify -->
+  <!-- <link rel="canonical" href="https://tu-dominio.netlify.app/"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(key => {
+      const val = params.get(key);
+      if (val) sessionStorage.setItem(key, val);
+    });
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" aria-label="Navegación principal">
+    <span class="navbar__logo">SUMMIT</span>
+    <a href="#formulario" class="navbar__cta">Solicitar visita</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">SUMMIT</h1>
+      <p class="hero__subtitle">OBRA NUEVA · ARAVACA · MADRID</p>
+      <a href="#formulario" class="hero__cta">Solicitar información</a>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true"></div>
+    <div class="hero__lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement section-animate">
+    <span class="statement__eyebrow">OBRA NUEVA EN ARAVACA</span>
+    <hr class="statement__rule">
+    <h2 class="statement__title">Vivir por encima de todo</h2>
+    <p class="statement__text">Summit es una promoción de obra nueva en Aravaca concebida para quienes no hacen concesiones. Terrazas privadas con vistas abiertas, materiales de primera calidad y una arquitectura contemporánea que convierte cada detalle en una decisión consciente.</p>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery section-animate">
+    <div class="gallery__grid">
+      <div class="gallery__item gallery__item--a">
+        <img src="img/terraza.jpg" alt="Terraza principal con pérgola y vistas panorámicas de Aravaca" width="800" height="600"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')" >
+        <div class="gallery__fallback" aria-hidden="true">Terraza</div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/salon.jpg" alt="Salón principal con luz natural y acceso directo al jardín" loading="lazy" width="400" height="280"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+        <div class="gallery__fallback" aria-hidden="true">Salón</div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/cocina.jpg" alt="Cocina con isla central y muebles de nogal" loading="lazy" width="400" height="280"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+        <div class="gallery__fallback" aria-hidden="true">Cocina</div>
+      </div>
+      <div class="gallery__item gallery__item--d">
+        <img src="img/dormitorio.jpg" alt="Dormitorio principal con cabecero tapizado y luz cálida" loading="lazy" width="800" height="280"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+        <div class="gallery__fallback" aria-hidden="true">Dormitorio</div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/bano.jpg" alt="Baño con acabados en madera y doble lavabo" loading="lazy" width="400" height="280"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+        <div class="gallery__fallback" aria-hidden="true">Baño</div>
+      </div>
+      <div class="gallery__item gallery__item--f">
+        <img src="img/hall.jpg" alt="Hall de entrada con escalera y consola de madera natural" loading="lazy" width="400" height="280"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+        <div class="gallery__fallback" aria-hidden="true">Hall</div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/hero.jpg" alt="Vista exterior de la promoción SUMMIT en Aravaca" loading="lazy" width="400" height="280"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+        <div class="gallery__fallback" aria-hidden="true">Exterior</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS -->
+  <section class="features section-animate">
+    <div class="features__grid">
+      <div class="features__item">
+        <span class="features__value">100%</span>
+        <span class="features__label">Obra nueva</span>
+        <p class="features__desc">Estrena un hogar diseñado y construido desde cero, sin compromisos</p>
+      </div>
+      <div class="features__item">
+        <span class="features__value">A+</span>
+        <span class="features__label">Eficiencia energética</span>
+        <p class="features__desc">Certificación máxima. Menor consumo, mayor confort</p>
+      </div>
+      <div class="features__item">
+        <span class="features__value">Aravaca</span>
+        <span class="features__label">Madrid</span>
+        <p class="features__desc">A 15 minutos del centro, en uno de los barrios más valorados de la capital</p>
+      </div>
+      <div class="features__item">
+        <span class="features__value">Llave en mano</span>
+        <span class="features__label">Calidades premium</span>
+        <p class="features__desc">Materiales y acabados seleccionados sin concesiones</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT -->
+  <section class="split section-animate">
+    <div class="split__image">
+      <img src="img/cocina.jpg" alt="Detalle de cocina con frentes de nogal y encimera de mármol" loading="lazy" width="960" height="600"
+        onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+      <div class="gallery__fallback" aria-hidden="true">Cocina</div>
+    </div>
+    <div class="split__content">
+      <span class="split__eyebrow">CALIDADES</span>
+      <h3 class="split__title">Donde el detalle define el lujo</h3>
+      <ul class="split__list">
+        <li>
+          <hr>
+          Suelos de microcemento pulido y parquet de roble natural
+        </li>
+        <li>
+          <hr>
+          Cocina con frentes de nogal y encimera de mármol
+        </li>
+        <li>
+          <hr>
+          Carpintería de aluminio de altas prestaciones con RPT
+        </li>
+        <li>
+          <hr>
+          Domótica integrada para climatización e iluminación
+        </li>
+        <li>
+          <hr>
+          Certificado de eficiencia energética A+
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="form-section" id="formulario">
+    <div class="form-section__inner">
+      <h2 class="form-section__title section-animate">Reserve su visita</h2>
+      <p class="form-section__subtitle section-animate">Nuestro equipo le contactará en menos de 24 horas</p>
+      <form action="https://formspree.io/f/XXXXXXXX" method="POST" id="contact-form" novalidate>
+        <div class="form__group">
+          <label for="nombre" class="form__label">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required autocomplete="given-name" placeholder="Su nombre">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <div class="form__group">
+          <label for="apellidos" class="form__label">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" required autocomplete="family-name" placeholder="Sus apellidos">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <div class="form__group">
+          <label for="telefono" class="form__label">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required pattern="[0-9+\s\-]{7,15}" autocomplete="tel" placeholder="+34 600 000 000">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <div class="form__group">
+          <label for="email" class="form__label">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="nombre@ejemplo.com">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <input type="hidden" name="_subject" value="Nuevo lead Summit Aravaca">
+        <input type="hidden" name="_next" value="">
+        <button type="submit" class="form__submit" id="form-submit">Solicitar información</button>
+      </form>
+      <div class="form-section__success" id="form-success" hidden>
+        <p class="form-section__success-check">✓</p>
+        <p class="form-section__success-title">Hemos recibido su solicitud.</p>
+        <p class="form-section__success-text">Nuestro equipo le contactará en breve.</p>
+      </div>
+      <p class="form-section__legal">Sus datos serán tratados conforme a nuestra <a href="#">política de privacidad</a>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <span class="footer__logo">SUMMIT</span>
+        <span class="footer__location">ARAVACA · MADRID</span>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">COMERCIALIZADO POR</span>
+        <span class="footer__company">PROMORA INMOBILIARIA</span>
+        <span class="footer__since">desde 1975</span>
+        <!-- Rellenar: +34 XXX XXX XXX -->
+        <!-- Rellenar: info@promora.es -->
+      </div>
+      <div class="footer__col">
+        <span class="footer__copy">&copy; 2025 Promora Inmobiliaria. Todos los derechos reservados.</span>
+        <div class="footer__links">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Aviso legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

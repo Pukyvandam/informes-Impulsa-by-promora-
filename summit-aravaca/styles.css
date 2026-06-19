@@ -328,7 +328,7 @@ a {
 .features__value {
   display: block;
   font-family: var(--font-display);
-  font-size: 52px;
+  font-size: 36px;
   font-weight: 200;
   color: var(--nogal);
 }
@@ -793,7 +793,7 @@ a {
   }
 
   .features__value {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .split__content {

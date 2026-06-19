@@ -226,6 +226,19 @@ a {
   margin: 0 auto;
 }
 
+.statement__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.statement__logo {
+  height: 48px;
+  width: auto;
+}
+
 .statement__eyebrow {
   font-family: var(--font-body);
   font-size: 11px;

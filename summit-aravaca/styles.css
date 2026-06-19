@@ -137,8 +137,9 @@ a {
 }
 
 .hero__logo {
-  height: 48px;
+  height: 40px;
   width: auto;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .hero__title {
@@ -280,6 +281,19 @@ a {
   transition: filter 0.3s;
 }
 
+.gallery__item::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 60px;
+  height: 20px;
+  background: url('img/logo-promora-white.png') no-repeat center / contain;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .gallery__item:hover img {
   filter: brightness(0.92);
 }
@@ -365,6 +379,19 @@ a {
   height: 400px;
   overflow: hidden;
   background: var(--greige);
+}
+
+.split__image::after {
+  content: '';
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 70px;
+  height: 24px;
+  background: url('img/logo-promora-white.png') no-repeat center / contain;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .split__image img {

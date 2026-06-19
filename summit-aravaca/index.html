@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUMMIT — Obra Nueva en Aravaca, Madrid | Promora Inmobiliaria</title>
-  <meta name="description" content="SUMMIT: promoción de obra nueva de lujo en Aravaca, Madrid. Terrazas privadas, eficiencia energética A+ y acabados premium. Comercializado por Promora Inmobiliaria.">
-  <meta property="og:title" content="SUMMIT — Obra Nueva de Lujo en Aravaca">
-  <meta property="og:description" content="Terrazas privadas con vistas abiertas, materiales de primera calidad y arquitectura contemporánea en Aravaca, Madrid.">
+  <title>SUMMIT — Obra Nueva en Valdemarín, Madrid | Promora Inmobiliaria</title>
+  <meta name="description" content="SUMMIT: promoción de obra nueva de lujo en Valdemarín, Madrid. Terrazas privadas, eficiencia energética A+ y acabados premium. Comercializado por Promora Inmobiliaria.">
+  <meta property="og:title" content="SUMMIT — Obra Nueva de Lujo en Valdemarín">
+  <meta property="og:description" content="Terrazas privadas con vistas abiertas, materiales de primera calidad y arquitectura contemporánea en Valdemarín, Madrid.">
   <meta property="og:image" content="img/hero.jpg">
   <meta property="og:type" content="website">
-  <!-- Rellenar con la URL definitiva de Netlify -->
-  <!-- <link rel="canonical" href="https://tu-dominio.netlify.app/"> -->
+  <link rel="canonical" href="https://summitaravaca.netlify.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
@@ -27,7 +26,10 @@
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar" aria-label="Navegación principal">
-    <span class="navbar__logo">SUMMIT</span>
+    <a href="https://www.promora.es" target="_blank" rel="noopener" class="navbar__logo-link">
+      <img src="img/logo-promora.png" alt="Promora Inmobiliaria" class="navbar__logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+      <span class="navbar__logo" style="display:none">SUMMIT</span>
+    </a>
     <a href="#formulario" class="navbar__cta">Solicitar visita</a>
   </nav>
 
@@ -35,8 +37,12 @@
   <section class="hero" id="hero">
     <div class="hero__overlay"></div>
     <div class="hero__content">
+      <div class="hero__logos">
+        <img src="img/logo-abu.png" alt="ABU" class="hero__logo" onerror="this.style.display='none'">
+        <img src="img/logo-promora-white.png" alt="Promora Inmobiliaria" class="hero__logo" onerror="this.style.display='none'">
+      </div>
       <h1 class="hero__title">SUMMIT</h1>
-      <p class="hero__subtitle">OBRA NUEVA · ARAVACA · MADRID</p>
+      <p class="hero__subtitle">OBRA NUEVA · VALDEMARÍN · MADRID</p>
       <a href="#formulario" class="hero__cta">Solicitar información</a>
     </div>
     <div class="hero__scroll-indicator" aria-hidden="true"></div>
@@ -47,18 +53,18 @@
 
   <!-- STATEMENT -->
   <section class="statement section-animate">
-    <span class="statement__eyebrow">OBRA NUEVA EN ARAVACA</span>
+    <span class="statement__eyebrow">OBRA NUEVA EN VALDEMARÍN</span>
     <hr class="statement__rule">
     <h2 class="statement__title">Vivir por encima de todo</h2>
-    <p class="statement__text">Summit es una promoción de obra nueva en Aravaca concebida para quienes no hacen concesiones. Terrazas privadas con vistas abiertas, materiales de primera calidad y una arquitectura contemporánea que convierte cada detalle en una decisión consciente.</p>
+    <p class="statement__text">Summit es una promoción de obra nueva en Valdemarín concebida para quienes no hacen concesiones. Terrazas privadas con vistas abiertas, materiales de primera calidad y una arquitectura contemporánea que convierte cada detalle en una decisión consciente.</p>
   </section>
 
   <!-- GALERÍA -->
   <section class="gallery section-animate">
     <div class="gallery__grid">
       <div class="gallery__item gallery__item--a">
-        <img src="img/terraza.jpg" alt="Terraza principal con pérgola y vistas panorámicas de Aravaca" width="800" height="600"
-          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')" >
+        <img src="img/terraza.jpg" alt="Terraza principal con pérgola y vistas panorámicas de Valdemarín" width="800" height="600"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
         <div class="gallery__fallback" aria-hidden="true">Terraza</div>
       </div>
       <div class="gallery__item">
@@ -71,8 +77,8 @@
           onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
         <div class="gallery__fallback" aria-hidden="true">Cocina</div>
       </div>
-      <div class="gallery__item gallery__item--d">
-        <img src="img/dormitorio.jpg" alt="Dormitorio principal con cabecero tapizado y luz cálida" loading="lazy" width="800" height="280"
+      <div class="gallery__item">
+        <img src="img/dormitorio.jpg" alt="Dormitorio principal con cabecero tapizado y luz cálida" loading="lazy" width="400" height="280"
           onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
         <div class="gallery__fallback" aria-hidden="true">Dormitorio</div>
       </div>
@@ -81,15 +87,20 @@
           onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
         <div class="gallery__fallback" aria-hidden="true">Baño</div>
       </div>
-      <div class="gallery__item gallery__item--f">
+      <div class="gallery__item">
         <img src="img/hall.jpg" alt="Hall de entrada con escalera y consola de madera natural" loading="lazy" width="400" height="280"
           onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
         <div class="gallery__fallback" aria-hidden="true">Hall</div>
       </div>
       <div class="gallery__item">
-        <img src="img/hero.jpg" alt="Vista exterior de la promoción SUMMIT en Aravaca" loading="lazy" width="400" height="280"
+        <img src="img/hero.jpg" alt="Vista exterior de la promoción SUMMIT en Valdemarín" loading="lazy" width="400" height="280"
           onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
         <div class="gallery__fallback" aria-hidden="true">Exterior</div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/detalle.jpg" alt="Detalle de acabados y materiales de calidad" loading="lazy" width="400" height="280"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery__placeholder')">
+        <div class="gallery__fallback" aria-hidden="true">Detalle</div>
       </div>
     </div>
   </section>
@@ -108,7 +119,7 @@
         <p class="features__desc">Certificación máxima. Menor consumo, mayor confort</p>
       </div>
       <div class="features__item">
-        <span class="features__value">Aravaca</span>
+        <span class="features__value">Valdemarín</span>
         <span class="features__label">Madrid</span>
         <p class="features__desc">A 15 minutos del centro, en uno de los barrios más valorados de la capital</p>
       </div>
@@ -158,17 +169,17 @@
   <!-- FORMULARIO -->
   <section class="form-section" id="formulario">
     <div class="form-section__inner">
-      <h2 class="form-section__title section-animate">Reserve su visita</h2>
-      <p class="form-section__subtitle section-animate">Nuestro equipo le contactará en menos de 24 horas</p>
+      <h2 class="form-section__title section-animate">Reserva tu visita</h2>
+      <p class="form-section__subtitle section-animate">Nuestro equipo te contactará en menos de 24 horas</p>
       <form action="https://formspree.io/f/mvznjgdw" method="POST" id="contact-form" novalidate>
         <div class="form__group">
           <label for="nombre" class="form__label">Nombre</label>
-          <input type="text" id="nombre" name="nombre" required autocomplete="given-name" placeholder="Su nombre">
+          <input type="text" id="nombre" name="nombre" required autocomplete="given-name" placeholder="Tu nombre">
           <span class="form__error" aria-live="polite"></span>
         </div>
         <div class="form__group">
           <label for="apellidos" class="form__label">Apellidos</label>
-          <input type="text" id="apellidos" name="apellidos" required autocomplete="family-name" placeholder="Sus apellidos">
+          <input type="text" id="apellidos" name="apellidos" required autocomplete="family-name" placeholder="Tus apellidos">
           <span class="form__error" aria-live="polite"></span>
         </div>
         <div class="form__group">
@@ -181,16 +192,16 @@
           <input type="email" id="email" name="email" required autocomplete="email" placeholder="nombre@ejemplo.com">
           <span class="form__error" aria-live="polite"></span>
         </div>
-        <input type="hidden" name="_subject" value="Nuevo lead Summit Aravaca">
+        <input type="hidden" name="_subject" value="Nuevo lead Summit Valdemarín">
         <input type="hidden" name="_next" value="">
-        <button type="submit" class="form__submit" id="form-submit">Solicitar información</button>
+        <button type="submit" class="form__submit" id="form-submit">Enviar</button>
       </form>
       <div class="form-section__success" id="form-success" hidden>
         <p class="form-section__success-check">✓</p>
-        <p class="form-section__success-title">Hemos recibido su solicitud.</p>
-        <p class="form-section__success-text">Nuestro equipo le contactará en breve.</p>
+        <p class="form-section__success-title">Hemos recibido tu solicitud.</p>
+        <p class="form-section__success-text">Nuestro equipo te contactará en breve.</p>
       </div>
-      <p class="form-section__legal">Sus datos serán tratados conforme a nuestra <a href="#">política de privacidad</a>.</p>
+      <p class="form-section__legal">Tus datos serán tratados conforme a nuestra <a href="privacidad.html">política de privacidad</a>.</p>
     </div>
   </section>
 
@@ -198,20 +209,21 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__col">
-        <span class="footer__logo">SUMMIT</span>
-        <span class="footer__location">ARAVACA · MADRID</span>
+        <a href="https://www.promora.es" target="_blank" rel="noopener">
+          <span class="footer__logo">SUMMIT</span>
+        </a>
+        <span class="footer__location">VALDEMARÍN · MADRID</span>
       </div>
       <div class="footer__col">
         <span class="footer__label">COMERCIALIZADO POR</span>
-        <span class="footer__company">PROMORA INMOBILIARIA</span>
+        <a href="https://www.promora.es" target="_blank" rel="noopener" class="footer__company">PROMORA INMOBILIARIA</a>
         <span class="footer__since">desde 1975</span>
-        <!-- Rellenar: +34 XXX XXX XXX -->
-        <!-- Rellenar: info@promora.es -->
+        <a href="https://www.promora.es" target="_blank" rel="noopener" class="footer__website">www.promora.es</a>
       </div>
       <div class="footer__col">
         <span class="footer__copy">&copy; 2025 Promora Inmobiliaria. Todos los derechos reservados.</span>
         <div class="footer__links">
-          <a href="#">Política de privacidad</a>
+          <a href="privacidad.html">Política de privacidad</a>
           <a href="#">Aviso legal</a>
         </div>
       </div>

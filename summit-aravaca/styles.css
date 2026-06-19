@@ -67,6 +67,16 @@ a {
   pointer-events: auto;
 }
 
+.navbar__logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo-img {
+  height: 36px;
+  width: auto;
+}
+
 .navbar__logo {
   font-family: var(--font-display);
   font-size: 20px;
@@ -108,7 +118,7 @@ a {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(44, 44, 42, 0.30);
+  background: rgba(44, 44, 42, 0.50);
 }
 
 .hero__content {
@@ -116,6 +126,19 @@ a {
   z-index: 2;
   text-align: center;
   padding: 0 24px;
+}
+
+.hero__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.hero__logo {
+  height: 48px;
+  width: auto;
 }
 
 .hero__title {
@@ -145,15 +168,16 @@ a {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--blanco);
-  border: 1.5px solid var(--blanco);
-  padding: 16px 40px;
+  color: var(--grafito);
+  background: var(--blanco);
+  border: none;
+  padding: 18px 48px;
   transition: background 0.25s, color 0.25s;
 }
 
 .hero__cta:hover {
-  background: var(--blanco);
-  color: var(--grafito);
+  background: var(--nogal);
+  color: var(--blanco);
 }
 
 .hero__scroll-indicator {
@@ -607,12 +631,28 @@ a {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.footer__company:hover {
+  color: var(--nogal);
+}
+
 .footer__since {
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 300;
   font-style: italic;
   color: rgba(255, 255, 255, 0.4);
+}
+
+.footer__website {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--nogal);
+  margin-top: 4px;
+}
+
+.footer__website:hover {
+  color: var(--blanco);
 }
 
 .footer__copy {
@@ -661,26 +701,17 @@ a {
     font-size: 68px;
   }
 
+  .hero__logo {
+    height: 56px;
+  }
+
   .statement__title {
     font-size: 48px;
   }
 
   .gallery__grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 280px 280px 280px;
-  }
-
-  .gallery__item--a {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-
-  .gallery__item--d {
-    grid-column: span 2;
-  }
-
-  .gallery__item--f {
-    grid-column: span 1;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 280px 280px;
   }
 
   .gallery__item {
@@ -737,6 +768,10 @@ a {
     font-size: 80px;
   }
 
+  .hero__logo {
+    height: 64px;
+  }
+
   .statement__title {
     font-size: 52px;
   }
@@ -772,7 +807,7 @@ a {
 
 @media (min-width: 1280px) {
   .gallery__grid {
-    grid-template-rows: 320px 320px 320px;
+    grid-template-rows: 320px 320px;
   }
 }
 

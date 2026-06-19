@@ -53,10 +53,10 @@
   if (!form || !submitBtn || !successEl) return;
 
   var validationMessages = {
-    nombre: 'Por favor, introduzca su nombre',
-    apellidos: 'Por favor, introduzca sus apellidos',
-    telefono: 'Introduzca un teléfono válido (7-15 dígitos)',
-    email: 'Introduzca un email válido'
+    nombre: 'Por favor, introduce tu nombre',
+    apellidos: 'Por favor, introduce tus apellidos',
+    telefono: 'Introduce un teléfono válido (7-15 dígitos)',
+    email: 'Introduce un email válido'
   };
 
   function validateField(input) {
@@ -128,10 +128,10 @@
     .catch(function () {
       var errMsg = document.createElement('p');
       errMsg.className = 'form__network-error';
-      errMsg.textContent = 'Ha ocurrido un error. Por favor, inténtelo de nuevo o llámenos directamente.';
+      errMsg.textContent = 'Ha ocurrido un error. Por favor, inténtalo de nuevo o llámanos directamente.';
       form.parentElement.insertBefore(errMsg, form.nextSibling);
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Solicitar información';
+      submitBtn.textContent = 'Enviar';
     });
   });
 })();

@@ -323,14 +323,17 @@ a {
 .features__item {
   text-align: center;
   padding: 0 16px;
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .features__value {
   display: block;
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 200;
   color: var(--nogal);
+  white-space: nowrap;
 }
 
 .features__label {

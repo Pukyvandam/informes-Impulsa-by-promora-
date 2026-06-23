@@ -316,7 +316,7 @@ a {
 
 .features__grid {
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;

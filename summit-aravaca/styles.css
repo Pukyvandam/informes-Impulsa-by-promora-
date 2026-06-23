@@ -414,14 +414,21 @@ a {
   font-size: 15px;
   font-weight: 300;
   color: #5A5A58;
-  line-height: 1.6;
-  padding: 16px 0;
+  line-height: 1.4;
+  padding: 10px 0 10px 8px;
+  transition: color 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+.split__list li:hover {
+  color: var(--nogal);
+  transform: translateX(6px);
 }
 
 .split__list hr {
   border: none;
   border-top: 1px solid var(--greige);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 /* ── FORM SECTION ── */

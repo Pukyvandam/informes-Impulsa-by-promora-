@@ -309,14 +309,13 @@ a {
 
 .features {
   background: var(--blanco);
-  padding: 100px 24px;
-  display: flex;
-  justify-content: center;
+  padding: 100px 48px;
 }
 
 .features__grid {
   width: 100%;
-  max-width: 1200px;
+  max-width: none;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;

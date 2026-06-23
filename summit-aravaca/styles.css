@@ -414,8 +414,8 @@ a {
   font-size: 15px;
   font-weight: 300;
   color: #5A5A58;
-  line-height: 1.5;
-  padding: 8px 0 8px 24px;
+  line-height: 1.6;
+  padding: 12px 0 12px 24px;
   position: relative;
   transition: color 0.3s, transform 0.3s;
   cursor: default;

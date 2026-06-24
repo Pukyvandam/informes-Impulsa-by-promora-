@@ -355,6 +355,18 @@ a {
   align-items: center;
   justify-content: flex-start;
   box-sizing: border-box;
+  position: relative;
+}
+
+.features__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: #E8E0D0;
+  display: none;
 }
 
 .features__value {
@@ -765,8 +777,8 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 
-  .features__item + .features__item {
-    box-shadow: -1px 0 0 var(--greige);
+  .features__item:not(:last-child)::after {
+    display: block;
   }
 
   .split {
@@ -819,8 +831,8 @@ a {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .features__item + .features__item {
-    box-shadow: -1px 0 0 var(--greige);
+  .features__item:not(:last-child)::after {
+    display: block;
   }
 
   .features__value {

@@ -182,20 +182,7 @@ a {
 }
 
 .hero__scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 40px;
-  background: var(--blanco);
-  z-index: 2;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  display: none;
 }
 
 .hero__lines {

@@ -358,11 +358,12 @@ a {
 
 .features__item {
   text-align: center;
-  padding: 0 24px;
+  padding: 0 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .features__value {
@@ -774,7 +775,7 @@ a {
   }
 
   .features__item + .features__item {
-    border-left: 1px solid var(--greige);
+    box-shadow: -1px 0 0 var(--greige);
   }
 
   .split {
@@ -828,7 +829,7 @@ a {
   }
 
   .features__item + .features__item {
-    border-left: 1px solid var(--greige);
+    box-shadow: -1px 0 0 var(--greige);
   }
 
   .features__value {

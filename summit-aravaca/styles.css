@@ -331,16 +331,20 @@ a {
 
 .features {
   background: var(--blanco);
-  padding: 100px 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .features__grid {
   width: 100%;
-  max-width: none;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
   gap: 48px;
+  padding: 100px 48px;
 }
 
 .features__item {

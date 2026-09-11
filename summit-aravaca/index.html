@@ -226,6 +226,79 @@
     </div>
   </footer>
 
+  <!-- FORMULARIO FLOTANTE (desktop) -->
+  <div class="floating-form" id="floating-form">
+    <div class="floating-form__header">
+      <p class="floating-form__title">Solicitar información</p>
+      <button class="floating-form__close" id="floating-close" aria-label="Cerrar">×</button>
+    </div>
+    <form action="https://formspree.io/f/mvznjgdw" method="POST" id="floating-contact-form" novalidate>
+      <div class="form__group">
+        <input type="text" name="nombre" required autocomplete="given-name" placeholder="Nombre">
+        <span class="form__error" aria-live="polite"></span>
+      </div>
+      <div class="form__group">
+        <input type="text" name="apellidos" required autocomplete="family-name" placeholder="Apellidos">
+        <span class="form__error" aria-live="polite"></span>
+      </div>
+      <div class="form__group">
+        <input type="tel" name="telefono" required pattern="[0-9+\s\-]{7,15}" autocomplete="tel" placeholder="Teléfono">
+        <span class="form__error" aria-live="polite"></span>
+      </div>
+      <div class="form__group">
+        <input type="email" name="email" required autocomplete="email" placeholder="Email">
+        <span class="form__error" aria-live="polite"></span>
+      </div>
+      <input type="hidden" name="_subject" value="Nuevo lead Summit Valdemarín">
+      <button type="submit" class="form__submit" id="floating-submit">Enviar</button>
+    </form>
+    <div class="floating-form__success" id="floating-success" hidden>
+      <p class="form-section__success-check">✓</p>
+      <p class="form-section__success-title">Hemos recibido tu solicitud.</p>
+      <p class="form-section__success-text">Nuestro equipo te contactará en breve.</p>
+    </div>
+    <p class="floating-form__legal">Datos tratados conforme a nuestra <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+
+  <!-- BOTÓN FLOTANTE (móvil) -->
+  <button class="mobile-cta" id="mobile-cta" aria-label="Solicitar información">
+    Solicitar información
+  </button>
+
+  <!-- MODAL (móvil) -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal">
+      <button class="modal__close" id="modal-close" aria-label="Cerrar">×</button>
+      <p class="modal__title">Solicitar información</p>
+      <form action="https://formspree.io/f/mvznjgdw" method="POST" id="modal-contact-form" novalidate>
+        <div class="form__group">
+          <input type="text" name="nombre" required autocomplete="given-name" placeholder="Nombre">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <div class="form__group">
+          <input type="text" name="apellidos" required autocomplete="family-name" placeholder="Apellidos">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <div class="form__group">
+          <input type="tel" name="telefono" required pattern="[0-9+\s\-]{7,15}" autocomplete="tel" placeholder="Teléfono">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <div class="form__group">
+          <input type="email" name="email" required autocomplete="email" placeholder="Email">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <input type="hidden" name="_subject" value="Nuevo lead Summit Valdemarín">
+        <button type="submit" class="form__submit" id="modal-submit">Enviar</button>
+      </form>
+      <div class="modal__success" id="modal-success" hidden>
+        <p class="form-section__success-check">✓</p>
+        <p class="form-section__success-title">Hemos recibido tu solicitud.</p>
+        <p class="form-section__success-text">Nuestro equipo te contactará en breve.</p>
+      </div>
+      <p class="floating-form__legal">Datos tratados conforme a nuestra <a href="privacidad.html">política de privacidad</a>.</p>
+    </div>
+  </div>
+
   <script src="main.js" defer></script>
 </body>
 </html>

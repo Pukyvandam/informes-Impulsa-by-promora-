@@ -134,4 +134,82 @@
       submitBtn.textContent = 'Enviar';
     });
   });
+
+  // 6. Floating form & mobile modal
+  function setupExtraForm(formEl, submitBtnEl, successEl) {
+    if (!formEl || !submitBtnEl || !successEl) return;
+    formEl.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var inputs = formEl.querySelectorAll('input:not([type="hidden"])');
+      var valid = true;
+      inputs.forEach(function (input) {
+        var errorEl = input.parentElement.querySelector('.form__error');
+        if (!input.validity.valid) {
+          input.classList.add('error');
+          if (errorEl) errorEl.textContent = 'Campo obligatorio';
+          valid = false;
+        } else {
+          input.classList.remove('error');
+          if (errorEl) errorEl.textContent = '';
+        }
+      });
+      if (!valid) return;
+      submitBtnEl.disabled = true;
+      submitBtnEl.textContent = 'Enviando...';
+      fetch(formEl.action, {
+        method: 'POST',
+        body: new FormData(formEl),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        if (r.ok) { formEl.hidden = true; successEl.hidden = false; }
+        else throw new Error();
+      }).catch(function () {
+        submitBtnEl.disabled = false;
+        submitBtnEl.textContent = 'Enviar';
+      });
+    });
+  }
+
+  setupExtraForm(
+    document.getElementById('floating-contact-form'),
+    document.getElementById('floating-submit'),
+    document.getElementById('floating-success')
+  );
+
+  // Floating form close button
+  var floatingClose = document.getElementById('floating-close');
+  var floatingForm = document.getElementById('floating-form');
+  if (floatingClose && floatingForm) {
+    floatingClose.addEventListener('click', function () {
+      floatingForm.style.display = 'none';
+    });
+  }
+
+  // Mobile modal
+  var mobileCta = document.getElementById('mobile-cta');
+  var modalOverlay = document.getElementById('modal-overlay');
+  var modalClose = document.getElementById('modal-close');
+
+  if (mobileCta && modalOverlay) {
+    mobileCta.addEventListener('click', function () {
+      modalOverlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeModal() {
+    if (modalOverlay) { modalOverlay.hidden = true; document.body.style.overflow = ''; }
+  }
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', function (e) {
+      if (e.target === modalOverlay) closeModal();
+    });
+  }
+
+  setupExtraForm(
+    document.getElementById('modal-contact-form'),
+    document.getElementById('modal-submit'),
+    document.getElementById('modal-success')
+  );
+
 })();

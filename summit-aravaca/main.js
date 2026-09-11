@@ -189,10 +189,14 @@
   var heroSection = document.getElementById('hero');
   var floatingTab = document.getElementById('floating-tab');
 
+  function getScrollY() {
+    return window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  }
+
   function checkScroll() {
     if (!heroSection || !floatingForm) return;
-    var heroHeight = heroSection.offsetHeight;
-    if (window.scrollY >= heroHeight) {
+    var heroBottom = heroSection.getBoundingClientRect().bottom;
+    if (heroBottom <= 0) {
       floatingForm.classList.add('floating-form--mini');
     } else {
       floatingForm.classList.remove('floating-form--mini');
@@ -200,6 +204,7 @@
   }
 
   window.addEventListener('scroll', checkScroll, { passive: true });
+  document.addEventListener('scroll', checkScroll, { passive: true });
   setTimeout(checkScroll, 100);
 
   // Tab click expands form temporarily

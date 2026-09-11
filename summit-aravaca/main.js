@@ -191,8 +191,8 @@
 
   function checkScroll() {
     if (!heroSection || !floatingForm) return;
-    var heroBottom = heroSection.getBoundingClientRect().bottom;
-    if (heroBottom <= 0) {
+    var heroHeight = heroSection.offsetHeight;
+    if (window.scrollY >= heroHeight) {
       floatingForm.classList.add('floating-form--mini');
     } else {
       floatingForm.classList.remove('floating-form--mini');

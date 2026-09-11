@@ -946,7 +946,42 @@ a {
 
 @media (min-width: 1024px) {
   .floating-form { display: block; }
-  .floating-form--hidden { display: none !important; }
+  .floating-form--mini {
+    width: auto;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    top: auto;
+    bottom: 40px;
+  }
+  .floating-form--mini .floating-form__header,
+  .floating-form--mini form,
+  .floating-form--mini .floating-form__legal,
+  .floating-form--mini .floating-form__success {
+    display: none;
+  }
+  .floating-form--mini .floating-form__tab {
+    display: flex;
+  }
+}
+
+.floating-form__tab {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: var(--nogal);
+  color: var(--blanco);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 14px 20px;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 
 /* ── BOTÓN FLOTANTE MÓVIL ── */

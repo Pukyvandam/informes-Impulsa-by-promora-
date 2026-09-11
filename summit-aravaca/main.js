@@ -185,19 +185,32 @@
     });
   }
 
-  // Show floating form only while hero is visible
+  // Mini tab when scrolled past hero
   var heroSection = document.getElementById('hero');
+  var floatingTab = document.getElementById('floating-tab');
+  var floatingIsMini = false;
+
   if (heroSection && floatingForm) {
     var formObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          floatingForm.classList.remove('floating-form--hidden');
+          floatingForm.classList.remove('floating-form--mini');
+          floatingIsMini = false;
         } else {
-          floatingForm.classList.add('floating-form--hidden');
+          floatingForm.classList.add('floating-form--mini');
+          floatingIsMini = true;
         }
       });
     }, { threshold: 0.1 });
     formObserver.observe(heroSection);
+  }
+
+  // Tab click expands form
+  if (floatingTab && floatingForm) {
+    floatingTab.addEventListener('click', function () {
+      floatingForm.classList.remove('floating-form--mini');
+      floatingIsMini = false;
+    });
   }
 
   // Mobile modal

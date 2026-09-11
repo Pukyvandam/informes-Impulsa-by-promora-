@@ -185,6 +185,17 @@
     });
   }
 
+  // Hide floating form when statement section ("Vivir por encima de todo") is visible
+  var statementSection = document.querySelector('.statement');
+  if (statementSection && floatingForm) {
+    var formObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        floatingForm.style.display = entry.isIntersecting ? 'none' : '';
+      });
+    }, { threshold: 0.1 });
+    formObserver.observe(statementSection);
+  }
+
   // Mobile modal
   var mobileCta = document.getElementById('mobile-cta');
   var modalOverlay = document.getElementById('modal-overlay');

@@ -188,28 +188,24 @@
   // Mini tab when scrolled past hero
   var heroSection = document.getElementById('hero');
   var floatingTab = document.getElementById('floating-tab');
-  var floatingIsMini = false;
 
-  if (heroSection && floatingForm) {
-    var formObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          floatingForm.classList.remove('floating-form--mini');
-          floatingIsMini = false;
-        } else {
-          floatingForm.classList.add('floating-form--mini');
-          floatingIsMini = true;
-        }
-      });
-    }, { threshold: 0.1 });
-    formObserver.observe(heroSection);
+  function checkScroll() {
+    if (!heroSection || !floatingForm) return;
+    var heroBottom = heroSection.getBoundingClientRect().bottom;
+    if (heroBottom < 0) {
+      floatingForm.classList.add('floating-form--mini');
+    } else {
+      floatingForm.classList.remove('floating-form--mini');
+    }
   }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll();
 
   // Tab click expands form
   if (floatingTab && floatingForm) {
     floatingTab.addEventListener('click', function () {
       floatingForm.classList.remove('floating-form--mini');
-      floatingIsMini = false;
     });
   }
 

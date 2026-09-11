@@ -192,19 +192,20 @@
   function checkScroll() {
     if (!heroSection || !floatingForm) return;
     var heroBottom = heroSection.getBoundingClientRect().bottom;
-    if (heroBottom < 0) {
+    if (heroBottom <= 0) {
       floatingForm.classList.add('floating-form--mini');
     } else {
       floatingForm.classList.remove('floating-form--mini');
     }
   }
 
-  window.addEventListener('scroll', checkScroll);
-  checkScroll();
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  setTimeout(checkScroll, 100);
 
-  // Tab click expands form
+  // Tab click expands form temporarily
   if (floatingTab && floatingForm) {
     floatingTab.addEventListener('click', function () {
+      floatingForm.classList.add('floating-form--expanded');
       floatingForm.classList.remove('floating-form--mini');
     });
   }

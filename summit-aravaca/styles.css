@@ -946,30 +946,33 @@ a {
 
 @media (min-width: 1024px) {
   .floating-form { display: block; }
-  .floating-form--mini {
-    width: auto;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    top: auto;
-    bottom: 40px;
-  }
-  .floating-form--mini .floating-form__header,
-  .floating-form--mini form,
-  .floating-form--mini .floating-form__legal,
-  .floating-form--mini .floating-form__success {
-    display: none;
-  }
-  .floating-form--mini .floating-form__tab {
-    display: flex;
-  }
+}
+
+.floating-form--mini {
+  width: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  top: auto !important;
+  bottom: 40px !important;
+  transform: none !important;
+}
+
+.floating-form--mini .floating-form__header,
+.floating-form--mini form,
+.floating-form--mini .floating-form__legal,
+.floating-form--mini .floating-form__success {
+  display: none !important;
+}
+
+.floating-form--mini .floating-form__tab {
+  display: flex !important;
 }
 
 .floating-form__tab {
   display: none;
   align-items: center;
-  gap: 10px;
   background: var(--nogal);
   color: var(--blanco);
   font-family: var(--font-body);

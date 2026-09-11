@@ -185,15 +185,15 @@
     });
   }
 
-  // Hide floating form when statement section ("Vivir por encima de todo") is visible
-  var statementSection = document.querySelector('.statement');
-  if (statementSection && floatingForm) {
+  // Show floating form only while hero is visible
+  var heroSection = document.getElementById('hero');
+  if (heroSection && floatingForm) {
     var formObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        floatingForm.classList.toggle('floating-form--hidden', entry.isIntersecting);
+        floatingForm.classList.toggle('floating-form--hidden', !entry.isIntersecting);
       });
     }, { threshold: 0.1 });
-    formObserver.observe(statementSection);
+    formObserver.observe(heroSection);
   }
 
   // Mobile modal

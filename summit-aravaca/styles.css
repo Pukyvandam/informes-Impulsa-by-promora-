@@ -946,6 +946,7 @@ a {
 
 @media (min-width: 1024px) {
   .floating-form { display: block; }
+  .floating-form--hidden { display: none !important; }
 }
 
 /* ── BOTÓN FLOTANTE MÓVIL ── */

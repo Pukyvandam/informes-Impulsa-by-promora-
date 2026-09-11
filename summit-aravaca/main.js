@@ -190,7 +190,7 @@
   if (statementSection && floatingForm) {
     var formObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        floatingForm.style.display = entry.isIntersecting ? 'none' : '';
+        floatingForm.classList.toggle('floating-form--hidden', entry.isIntersecting);
       });
     }, { threshold: 0.1 });
     formObserver.observe(statementSection);
